@@ -13,9 +13,10 @@ namespace Hello;
 
 use Hello\Config\RouterDelegatorFactory;
 use Hello\Intent\HelloIntent;
+use Hello\TextHelper\HelloTextHelper;
 use Phlexa\Application\AlexaApplication;
-use Phlexa\TextHelper\TextHelper;
 use PhlexaExpressive\Intent\AbstractIntentFactory;
+use PhlexaExpressive\TextHelper\TextHelperFactory;
 use Zend\Expressive\Application;
 
 /**
@@ -51,6 +52,9 @@ class ConfigProvider
                     RouterDelegatorFactory::class,
                 ],
             ],
+            'factories'  => [
+                HelloTextHelper::class => TextHelperFactory::class,
+            ],
         ];
     }
 
@@ -73,15 +77,18 @@ class ConfigProvider
     {
         return [
             self::NAME => [
-                'applicationId'    => 'amzn1.ask.skill.place-your-skill-id-here',
-                'applicationClass' => AlexaApplication::class,
-                'textHelperClass'  => TextHelper::class,
-                'sessionDefaults'  => [
+                'applicationId'        => 'amzn1.ask.skill.place-your-skill-id-here',
+                'skillTitle'           => 'Hello World Alexa Skill',
+                'applicationClass'     => AlexaApplication::class,
+                'textHelperClass'      => HelloTextHelper::class,
+                'sessionDefaults'      => [
                     'count' => 0,
                 ],
-                'smallImageUrl'    => 'https://www.travello.audio/cards/hello-480x480.png',
-                'largeImageUrl'    => 'https://www.travello.audio/cards/hello-800x800.png',
-                'intents'          => [
+                'smallImageUrl'        => 'https://www.phoice.tech/cards/hello-480x480.png',
+                'largeImageUrl'        => 'https://www.phoice.tech/cards/hello-800x800.png',
+                'backgroundImageUrl'   => 'https://www.phoice.tech/cards/hello-1024x600.png',
+                'backgroundImageTitle' => 'Hello World Alexa Skill',
+                'intents'              => [
                     'aliases' => [
                         HelloIntent::NAME => HelloIntent::class,
                     ],
@@ -90,7 +97,7 @@ class ConfigProvider
                         HelloIntent::class => AbstractIntentFactory::class,
                     ],
                 ],
-                'texts'            => [
+                'texts'                => [
                     'de-DE' => include PROJECT_ROOT . '/data/texts/hello.common.texts.de-DE.php',
                     'en-UK' => include PROJECT_ROOT . '/data/texts/hello.common.texts.en-UK.php',
                     'en-US' => include PROJECT_ROOT . '/data/texts/hello.common.texts.en-US.php',
