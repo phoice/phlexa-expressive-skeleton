@@ -7,10 +7,10 @@
   "config": {
     "sort-packages": true
   },
-  "minimum-stability" : "dev",
   "require": {
     "php": "^7.1",
     "http-interop/http-middleware": "^0.4.1",
+    "phoice/phlexa": "dev-master",
     "phoice/phlexa-expressive": "dev-master",
     "zendframework/zend-component-installer": "^1.0 || ^0.7.0",
     "zendframework/zend-config-aggregator": "^0.2.0",

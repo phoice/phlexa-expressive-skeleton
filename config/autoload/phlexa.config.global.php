@@ -10,7 +10,7 @@
  */
 
 return [
-    'travello_alexa' => [
+    'phlexa' => [
         'validate_signature' => true,
         'log_requests'       => false,
         'cache_flag'         => true,
