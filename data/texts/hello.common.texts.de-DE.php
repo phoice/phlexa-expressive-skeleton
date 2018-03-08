@@ -1,0 +1,24 @@
+<?php
+/**
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ *
+ * @author     Ralf Eggert <ralf@travello.audio>
+ * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
+ * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://www.phoice.tech/
+ * @link       https://www.travello.audio/
+ */
+
+return [
+    'launchTitle'     => 'Hallo',
+    'launchMessage'   => 'Hallo und Willkommen',
+    'repromptMessage' => 'Reprompt',
+    'helpTitle'       => 'Hilfe',
+    'helpMessage'     => 'Hier den Hilfetext platzieren',
+    'stopTitle'       => 'Danke',
+    'stopMessage'     => 'Danke und bis bald',
+    'cancelTitle'     => 'Abbrechen',
+    'cancelMessage'   => 'Abbrechen Nachricht',
+    'helloTitle'      => 'Hallo dies ist der Titel',
+    'helloMessage'    => 'Hallo dies ist die Nachricht für den Hallo Intent.',
+];
