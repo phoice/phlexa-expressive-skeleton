@@ -24,22 +24,14 @@ $pattern = 'config/autoload/{{,*.}global,{,*.}'
 
 $aggregator = new ConfigAggregator(
     [
-//        Zend\HttpHandlerRunner\ConfigProvider::class,
-//        Zend\Expressive\ZendView\ConfigProvider::class,
-//        Zend\Expressive\Router\ConfigProvider::class,
-//        Zend\Expressive\Helper\ConfigProvider::class,
-//        Zend\Expressive\ConfigProvider::class,
-//        Zend\Router\ConfigProvider::class,
-//        Zend\Validator\ConfigProvider::class,
-
-        \Zend\HttpHandlerRunner\ConfigProvider::class,
-        \Zend\Expressive\ZendView\ConfigProvider::class,
-        \Zend\Expressive\Router\ZendRouter\ConfigProvider::class,
-        \Zend\Router\ConfigProvider::class,
-        \Zend\Validator\ConfigProvider::class,
-        \Zend\Expressive\Helper\ConfigProvider::class,
-        \Zend\Expressive\ConfigProvider::class,
-        \Zend\Expressive\Router\ConfigProvider::class,
+        Zend\HttpHandlerRunner\ConfigProvider::class,
+        Zend\Expressive\ZendView\ConfigProvider::class,
+        Zend\Expressive\Router\ZendRouter\ConfigProvider::class,
+        Zend\Router\ConfigProvider::class,
+        Zend\Validator\ConfigProvider::class,
+        Zend\Expressive\Helper\ConfigProvider::class,
+        Zend\Expressive\ConfigProvider::class,
+        Zend\Expressive\Router\ConfigProvider::class,
 
         PhlexaExpressive\ConfigProvider::class,
 
