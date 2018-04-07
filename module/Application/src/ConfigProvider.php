@@ -9,9 +9,11 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 namespace Application;
 
-use Application\Action\HomePageAction;
+use Application\Handler\HomePageHandler;
 use Application\Config\PipelineDelegatorFactory;
 use Application\Config\RouterDelegatorFactory;
 use Zend\Expressive\Application;
@@ -48,7 +50,7 @@ class ConfigProvider
                 ],
             ],
             'factories'  => [
-                HomePageAction::class => InvokableFactory::class,
+                HomePageHandler::class => InvokableFactory::class,
             ],
         ];
     }

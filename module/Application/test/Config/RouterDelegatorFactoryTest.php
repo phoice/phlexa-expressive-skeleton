@@ -1,6 +1,6 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive 
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
@@ -9,10 +9,12 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 namespace ApplicationTest\Config;
 
-use Application\Action\HomePageAction;
 use Application\Config\RouterDelegatorFactory;
+use Application\Handler\HomePageHandler;
 use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\MethodProphecy;
@@ -38,7 +40,7 @@ class RouterDelegatorFactoryTest extends TestCase
         $application = $this->prophesize(Application::class);
 
         /** @var MethodProphecy $getMethod */
-        $getMethod = $application->route('/', HomePageAction::class, ['GET', 'POST'], 'home');
+        $getMethod = $application->route('/', HomePageHandler::class, ['GET', 'POST'], 'home');
         $getMethod->shouldBeCalled();
 
         $callable = function () use ($application) {

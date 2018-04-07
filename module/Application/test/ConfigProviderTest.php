@@ -1,6 +1,6 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive 
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
@@ -8,6 +8,8 @@
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
+
+declare(strict_types=1);
 
 namespace ApplicationTest;
 

@@ -9,39 +9,37 @@
  * @link       https://www.travello.audio/
  */
 
-namespace ApplicationTest\Action;
+declare(strict_types=1);
 
-use Application\Action\HomePageAction;
-use Interop\Http\ServerMiddleware\DelegateInterface;
+namespace ApplicationTest\Handler;
+
+use Application\Handler\HomePageHandler;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
 use Zend\Diactoros\Response;
 
 /**
- * Class HomePageActionTest
+ * Class HomePageHandlerTest
  *
- * @package ApplicationTest\Action
+ * @package ApplicationTest\Handler
  */
-class HomePageActionTest extends TestCase
+class HomePageHandlerTest extends TestCase
 {
     /**
      *
      */
-    public function testResponse()
+    public function testResponse(): void
     {
-        $homePage = new HomePageAction();
+        $homePage = new HomePageHandler();
 
         /** @var ServerRequestInterface $request */
         $request = $this->prophesize(ServerRequestInterface::class)->reveal();
 
-        /** @var DelegateInterface $delegate */
-        $delegate = $this->prophesize(DelegateInterface::class)->reveal();
-
         /** @var Response $response */
-        $response = $homePage->process($request, $delegate);
+        $response = $homePage->handle($request);
 
-        $this->assertTrue($response instanceof Response);
-        $this->assertTrue($response instanceof Response\JsonResponse);
+        $this->assertInstanceOf(Response::class, $response);
+        $this->assertInstanceOf(Response\JsonResponse::class, $response);
 
         $json = json_decode((string)$response->getBody());
 

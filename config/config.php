@@ -9,12 +9,14 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 use Zend\ConfigAggregator\ArrayProvider;
 use Zend\ConfigAggregator\ConfigAggregator;
 use Zend\ConfigAggregator\PhpFileProvider;
 
 $cacheConfig = [
-    'config_cache_path' => 'data/config-cache.php',
+    'config_cache_path' => 'data/cache/config-cache.php',
 ];
 
 $pattern = 'config/autoload/{{,*.}global,{,*.}'
@@ -22,9 +24,22 @@ $pattern = 'config/autoload/{{,*.}global,{,*.}'
 
 $aggregator = new ConfigAggregator(
     [
+//        Zend\HttpHandlerRunner\ConfigProvider::class,
+//        Zend\Expressive\ZendView\ConfigProvider::class,
+//        Zend\Expressive\Router\ConfigProvider::class,
+//        Zend\Expressive\Helper\ConfigProvider::class,
+//        Zend\Expressive\ConfigProvider::class,
+//        Zend\Router\ConfigProvider::class,
+//        Zend\Validator\ConfigProvider::class,
+
+        \Zend\HttpHandlerRunner\ConfigProvider::class,
+        \Zend\Expressive\ZendView\ConfigProvider::class,
+        \Zend\Expressive\Router\ZendRouter\ConfigProvider::class,
+        \Zend\Router\ConfigProvider::class,
+        \Zend\Validator\ConfigProvider::class,
+        \Zend\Expressive\Helper\ConfigProvider::class,
+        \Zend\Expressive\ConfigProvider::class,
         \Zend\Expressive\Router\ConfigProvider::class,
-        Zend\Router\ConfigProvider::class,
-        Zend\Validator\ConfigProvider::class,
 
         PhlexaExpressive\ConfigProvider::class,
 

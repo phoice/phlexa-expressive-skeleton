@@ -1,6 +1,6 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive 
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
@@ -9,10 +9,11 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 namespace HelloTest\Intent;
 
 use Hello\Intent\HelloIntent;
-use PHPUnit\Framework\TestCase;
 use Phlexa\Configuration\SkillConfiguration;
 use Phlexa\Intent\AbstractIntent;
 use Phlexa\Intent\IntentInterface;
@@ -20,6 +21,7 @@ use Phlexa\Request\RequestType\RequestTypeFactory;
 use Phlexa\Response\AlexaResponse;
 use Phlexa\Session\SessionContainer;
 use Phlexa\TextHelper\TextHelper;
+use PHPUnit\Framework\TestCase;
 
 class HelloIntentTest extends TestCase
 {

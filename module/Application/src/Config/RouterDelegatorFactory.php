@@ -9,9 +9,11 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 namespace Application\Config;
 
-use Application\Action\HomePageAction;
+use Application\Handler\HomePageHandler;
 use Interop\Container\ContainerInterface;
 use Zend\Expressive\Application;
 use Zend\ServiceManager\Factory\DelegatorFactoryInterface;
@@ -38,7 +40,7 @@ class RouterDelegatorFactory implements DelegatorFactoryInterface
 
         $application->route(
             '/',
-            HomePageAction::class,
+            HomePageHandler::class,
             ['GET', 'POST'],
             'home'
         );

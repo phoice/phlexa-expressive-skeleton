@@ -7,25 +7,38 @@
   "config": {
     "sort-packages": true
   },
+  "extra": {
+    "zf": {
+      "component-whitelist": [
+        "zendframework/zend-expressive",
+        "zendframework/zend-expressive-helpers",
+        "zendframework/zend-expressive-router",
+        "zendframework/zend-httphandlerrunner",
+        "zendframework/zend-expressive-zendrouter",
+        "zendframework/zend-expressive-zendviewrenderer"
+      ]
+    }
+  },
+  "minimum-stability" : "beta",
   "require": {
     "php": "^7.1",
-    "http-interop/http-middleware": "^0.4.1",
-    "phoice/phlexa": "dev-master",
-    "phoice/phlexa-expressive": "dev-master",
-    "zendframework/zend-component-installer": "^1.0 || ^0.7.0",
-    "zendframework/zend-config-aggregator": "^0.2.0",
-    "zendframework/zend-expressive": "^2.0",
-    "zendframework/zend-expressive-helpers": "^3.0.1",
-    "zendframework/zend-expressive-zendrouter": "^2.0.1",
-    "zendframework/zend-expressive-zendviewrenderer": "^1.3",
-    "zendframework/zend-stdlib": "^3.1",
-    "zendframework/zend-uri": "^2.5"
+    "phoice/phlexa": "1.0.0-beta",
+    "phoice/phlexa-expressive": "1.0.0-beta",
+    "roave/security-advisories": "dev-master",
+    "zendframework/zend-component-installer": "^2.1.1",
+    "zendframework/zend-config-aggregator": "^1.0",
+    "zendframework/zend-diactoros": "^1.7.1",
+    "zendframework/zend-expressive": "^3.0.1",
+    "zendframework/zend-expressive-helpers": "^5.0",
+    "zendframework/zend-expressive-zendrouter": "^3.0",
+    "zendframework/zend-expressive-zendviewrenderer": "^2.0",
+    "zendframework/zend-servicemanager": "^3.3"
   },
   "require-dev": {
-    "filp/whoops": "^2.1",
-    "phpunit/phpunit": "^6.0",
-    "squizlabs/php_codesniffer": "^2.3",
-    "zendframework/zend-expressive-tooling": "^0.3.1"
+    "filp/whoops": "^2.1.12",
+    "phpunit/phpunit": "^7.0",
+    "squizlabs/php_codesniffer": "^2.9.1",
+    "zendframework/zend-expressive-tooling": "^1.0"
   },
   "autoload": {
     "psr-4": {
@@ -45,6 +58,7 @@
       "@test"
     ],
     "cs-check": "phpcs module/",
+    "expressive": "expressive --ansi",
     "test": "phpunit --colors=always",
     "test-coverage": "phpunit --colors=always --coverage-html html/coverage/",
     "upload-coverage": "coveralls -v"

@@ -9,28 +9,30 @@
  * @link       https://www.travello.audio/
  */
 
-namespace Application\Action;
+declare(strict_types=1);
 
-use Interop\Http\ServerMiddleware\DelegateInterface;
-use Interop\Http\ServerMiddleware\MiddlewareInterface as ServerMiddlewareInterface;
+namespace Application\Handler;
+
+use InvalidArgumentException;
+use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 use Zend\Diactoros\Response\JsonResponse;
 
 /**
- * Class HomePageAction
+ * Class HomePageHandler
  *
- * @package Application\Action
+ * @package Application\Handler
  */
-class HomePageAction implements ServerMiddlewareInterface
+class HomePageHandler implements RequestHandlerInterface
 {
     /**
      * @param ServerRequestInterface $request
-     * @param DelegateInterface      $delegate
      *
-     * @return mixed
-     * @throws \InvalidArgumentException
+     * @return JsonResponse
+     * @throws InvalidArgumentException
      */
-    public function process(ServerRequestInterface $request, DelegateInterface $delegate)
+    public function handle(ServerRequestInterface $request): ResponseInterface
     {
         return new JsonResponse(
             [

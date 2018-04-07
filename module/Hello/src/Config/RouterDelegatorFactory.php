@@ -13,8 +13,8 @@ namespace Hello\Config;
 
 use Hello\ConfigProvider;
 use Interop\Container\ContainerInterface;
-use PhlexaExpressive\Action\HtmlPageAction;
-use PhlexaExpressive\Action\SkillAction;
+use PhlexaExpressive\Handler\HtmlPageHandler;
+use PhlexaExpressive\Handler\SkillHandler;
 use Zend\Expressive\Application;
 use Zend\ServiceManager\Factory\DelegatorFactoryInterface;
 
@@ -38,13 +38,13 @@ class RouterDelegatorFactory implements DelegatorFactoryInterface
         /** @var Application $application */
         $application = $callback();
 
-        $application->post('/hello', SkillAction::class, 'hello')
+        $application->post('/hello', SkillHandler::class, 'hello')
             ->setOptions(['defaults' => ['skillName' => ConfigProvider::NAME]]);
 
-        $application->get('/hello/privacy', HtmlPageAction::class, 'hello-privacy')
+        $application->get('/hello/privacy', HtmlPageHandler::class, 'hello-privacy')
             ->setOptions(['defaults' => ['template' => 'hello::privacy']]);
 
-        $application->get('/hello/terms', HtmlPageAction::class, 'hello-terms')
+        $application->get('/hello/terms', HtmlPageHandler::class, 'hello-terms')
             ->setOptions(['defaults' => ['template' => 'hello::terms']]);
 
         return $application;

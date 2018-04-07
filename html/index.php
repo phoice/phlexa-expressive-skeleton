@@ -9,22 +9,22 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 use Interop\Container\ContainerInterface;
 use Zend\Expressive\Application;
 
-define('PROJECT_ROOT', realpath(__DIR__ . '/..'));
-
-define(
-    'APPLICATION_ENV',
-    getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'
-);
+define('PROJECT_ROOT', dirname(__DIR__) . '');
+define('APPLICATION_ENV', getenv('APPLICATION_ENV') ?: 'production');
 
 chdir(dirname(__DIR__));
 require PROJECT_ROOT . '/vendor/autoload.php';
 
-/** @var ContainerInterface $container */
-$container = require PROJECT_ROOT . '/config/container.php';
+(function () {
+    /** @var ContainerInterface $container */
+    $container = require PROJECT_ROOT . '/config/container.php';
 
-/** @var Application $app */
-$app = $container->get(Application::class);
-$app->run();
+    /** @var Application $app */
+    $app = $container->get(Application::class);
+    $app->run();
+})();

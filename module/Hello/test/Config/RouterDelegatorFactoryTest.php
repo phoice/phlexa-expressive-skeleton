@@ -9,16 +9,18 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 namespace HelloTest\Config;
 
 use Hello\Config\RouterDelegatorFactory;
 use Hello\ConfigProvider;
 use Interop\Container\ContainerInterface;
+use PhlexaExpressive\Handler\HtmlPageHandler;
+use PhlexaExpressive\Handler\SkillHandler;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\MethodProphecy;
 use Prophecy\Prophecy\ObjectProphecy;
-use PhlexaExpressive\Action\HtmlPageAction;
-use PhlexaExpressive\Action\SkillAction;
 use Zend\Expressive\Application;
 use Zend\Expressive\Router\Route;
 
@@ -48,7 +50,7 @@ class RouterDelegatorFactoryTest extends TestCase
         $route1Method->shouldBeCalled();
 
         /** @var MethodProphecy $post1Method */
-        $post1Method = $application->post('/hello', SkillAction::class, 'hello');
+        $post1Method = $application->post('/hello', SkillHandler::class, 'hello');
         $post1Method->shouldBeCalled()->willReturn($route1->reveal());
 
         /** @var Route|ObjectProphecy $route2 */
@@ -59,7 +61,7 @@ class RouterDelegatorFactoryTest extends TestCase
         $route2Method->shouldBeCalled();
 
         /** @var MethodProphecy $post2Method */
-        $post2Method = $application->get('/hello/privacy', HtmlPageAction::class, 'hello-privacy');
+        $post2Method = $application->get('/hello/privacy', HtmlPageHandler::class, 'hello-privacy');
         $post2Method->shouldBeCalled()->willReturn($route2->reveal());
 
         /** @var Route|ObjectProphecy $route3 */
@@ -70,7 +72,7 @@ class RouterDelegatorFactoryTest extends TestCase
         $route3Method->shouldBeCalled();
 
         /** @var MethodProphecy $post3Method */
-        $post3Method = $application->get('/hello/terms', HtmlPageAction::class, 'hello-terms');
+        $post3Method = $application->get('/hello/terms', HtmlPageHandler::class, 'hello-terms');
         $post3Method->shouldBeCalled()->willReturn($route3->reveal());
 
         $callable = function () use ($application) {

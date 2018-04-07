@@ -9,17 +9,14 @@
  * @link       https://www.travello.audio/
  */
 
-use Zend\ServiceManager\Config;
+declare(strict_types=1);
+
 use Zend\ServiceManager\ServiceManager;
 
-// Load configuration
 $config = require __DIR__ . '/config.php';
 
-// Build container
-$container = new ServiceManager();
-(new Config($config['dependencies']))->configureServiceManager($container);
+$dependencies = $config['dependencies'];
 
-// Inject config
-$container->setService('config', $config);
+$dependencies['services']['config'] = $config;
 
-return $container;
+return new ServiceManager($dependencies);

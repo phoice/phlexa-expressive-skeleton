@@ -9,24 +9,30 @@
  * @link       https://www.travello.audio/
  */
 
+declare(strict_types=1);
+
 namespace ApplicationTest\Config;
 
 use Application\Config\PipelineDelegatorFactory;
 use Interop\Container\ContainerInterface;
-use PHPUnit\Framework\TestCase;
-use Prophecy\Prophecy\MethodProphecy;
-use Prophecy\Prophecy\ObjectProphecy;
 use PhlexaExpressive\Middleware\CheckApplicationMiddleware;
 use PhlexaExpressive\Middleware\ConfigureSkillMiddleware;
 use PhlexaExpressive\Middleware\LogAlexaRequestMiddleware;
 use PhlexaExpressive\Middleware\SetLocaleMiddleware;
 use PhlexaExpressive\Middleware\ValidateCertificateMiddleware;
+use PHPUnit\Framework\TestCase;
+use Prophecy\Prophecy\MethodProphecy;
+use Prophecy\Prophecy\ObjectProphecy;
 use Zend\Expressive\Application;
-use Zend\Expressive\Middleware\ImplicitHeadMiddleware;
-use Zend\Expressive\Middleware\ImplicitOptionsMiddleware;
-use Zend\Expressive\Middleware\NotFoundHandler;
+use Zend\Expressive\Handler\NotFoundHandler;
+use Zend\Expressive\Helper\ServerUrlMiddleware;
+use Zend\Expressive\Helper\UrlHelperMiddleware;
+use Zend\Expressive\Router\Middleware\DispatchMiddleware;
+use Zend\Expressive\Router\Middleware\ImplicitHeadMiddleware;
+use Zend\Expressive\Router\Middleware\ImplicitOptionsMiddleware;
+use Zend\Expressive\Router\Middleware\MethodNotAllowedMiddleware;
+use Zend\Expressive\Router\Middleware\RouteMiddleware;
 use Zend\Stratigility\Middleware\ErrorHandler;
-use Zend\Stratigility\Middleware\OriginalMessages;
 
 /**
  * Class PipelineDelegatorFactoryTest
@@ -47,15 +53,15 @@ class PipelineDelegatorFactoryTest extends TestCase
         $application = $this->prophesize(Application::class);
 
         /** @var MethodProphecy $pipeMethod */
-        $pipeMethod = $application->pipe(OriginalMessages::class);
-        $pipeMethod->shouldBeCalled();
-
-        /** @var MethodProphecy $pipeMethod */
         $pipeMethod = $application->pipe(ErrorHandler::class);
         $pipeMethod->shouldBeCalled();
 
         /** @var MethodProphecy $pipeMethod */
-        $pipeMethod = $application->pipeRoutingMiddleware();
+        $pipeMethod = $application->pipe(ServerUrlMiddleware::class);
+        $pipeMethod->shouldBeCalled();
+
+        /** @var MethodProphecy $pipeMethod */
+        $pipeMethod = $application->pipe(RouteMiddleware::class);
         $pipeMethod->shouldBeCalled();
 
         /** @var MethodProphecy $pipeMethod */
@@ -87,7 +93,15 @@ class PipelineDelegatorFactoryTest extends TestCase
         $pipeMethod->shouldBeCalled();
 
         /** @var MethodProphecy $pipeMethod */
-        $pipeMethod = $application->pipeDispatchMiddleware();
+        $pipeMethod = $application->pipe(MethodNotAllowedMiddleware::class);
+        $pipeMethod->shouldBeCalled();
+
+        /** @var MethodProphecy $pipeMethod */
+        $pipeMethod = $application->pipe(UrlHelperMiddleware::class);
+        $pipeMethod->shouldBeCalled();
+
+        /** @var MethodProphecy $pipeMethod */
+        $pipeMethod = $application->pipe(DispatchMiddleware::class);
         $pipeMethod->shouldBeCalled();
 
         /** @var MethodProphecy $pipeMethod */
