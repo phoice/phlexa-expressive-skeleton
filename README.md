@@ -146,3 +146,17 @@ validation and the request logging feature.
 
 * `/config/autoload/phlexa.config.global.php`
 * `/config/autoload/phlexa.config.development.php`
+
+
+## Develop on Docker
+
+There is a docker file wish you can use for your local development. Your local code will also mount into the docker contaner. 
+To access the server type into the browser "http:://localhost"
+
+* install docker (see: https://docs.docker.com/install/)
+* start "docker-compose up -d"
+* install vendor packages "docker exec phlexa-expressive-skeleton_php-apache_1 composer install"
+* open in browser "http://localhost"
+
+Hint: There also a maria db server included in this docker files. You can find the user and the password in file "./mariadb/Dockerfile" The maria db is not necessary to run the skeleton app.
+If you don't want to create the maria db modify the dockerfile.
