@@ -1,0 +1,20 @@
+version: '2'
+services:
+  php-apache:
+    build: ./php-apache
+    links:
+      - db
+    ports:
+      - "80:80"
+    expose:
+      - "9000"
+    volumes:
+      - ./:/var/www/html
+
+  db:
+    build: ./mariadb
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./data/mariadb:/var/lib/mariadb
+
