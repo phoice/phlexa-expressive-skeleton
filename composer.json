@@ -22,8 +22,8 @@
   "minimum-stability" : "beta",
   "require": {
     "php": "^7.1",
-    "phoice/phlexa": "1.0.0-beta-3",
-    "phoice/phlexa-expressive": "1.0.0-beta-3",
+    "phoice/phlexa": "1.0.0-beta-6",
+    "phoice/phlexa-expressive": "1.0.0-beta-6",
     "roave/security-advisories": "dev-master",
     "zendframework/zend-component-installer": "^2.1.1",
     "zendframework/zend-config-aggregator": "^1.0",
