@@ -19,11 +19,11 @@
       ]
     }
   },
-  "minimum-stability" : "beta",
+  "minimum-stability" : "stable",
   "require": {
     "php": "^7.1",
-    "phoice/phlexa": "1.0.0-beta-6",
-    "phoice/phlexa-expressive": "1.0.0-beta-6",
+    "phoice/phlexa": "^1.0",
+    "phoice/phlexa-expressive": "^1.0",
     "roave/security-advisories": "dev-master",
     "zendframework/zend-component-installer": "^2.1.1",
     "zendframework/zend-config-aggregator": "^1.0",
