@@ -51,6 +51,7 @@ class HelloIntent extends AbstractIntent
             ),
             'display_title'                => $this->getTextHelper()->getHelloTitle(),
             'display_primary_text'         => $message,
+            'hint_text'                    => $this->getTextHelper()->getHintText(),
             'image_title'                  => $this->getTextHelper()->getHelloTitle(),
             'small_front_image'            => $this->getSkillConfiguration()->getSmallFrontImage(),
             'large_front_image'            => $this->getSkillConfiguration()->getLargeFrontImage(),
