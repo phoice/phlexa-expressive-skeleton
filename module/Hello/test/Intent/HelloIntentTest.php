@@ -106,8 +106,13 @@ class HelloIntentTest extends TestCase
         $alexaResponse->setSessionContainer($sessionContainer);
 
         $skillConfiguration = new SkillConfiguration();
-        $skillConfiguration->setSmallImageUrl('https://image.server/small.png');
-        $skillConfiguration->setLargeImageUrl('https://image.server/large.png');
+        $skillConfiguration->setSmallFrontImage('https://image.server/small.png');
+        $skillConfiguration->setLargeFrontImage('https://image.server/large.png');
+        $skillConfiguration->setSmallBackgroundImage('https://image.server/small-background.png');
+        $skillConfiguration->setMediumBackgroundImage('https://image.server/medium-background.png');
+        $skillConfiguration->setLargeBackgroundImage('https://image.server/large-background.png');
+        $skillConfiguration->setExtraLargeBackgroundImage('https://image.server/extra-large-background.png');
+        $skillConfiguration->setNormalBodyAplDocument('{"type": "APL"}');
 
         $helloIntent = new HelloIntent($alexaRequest, $alexaResponse, $textHelper, $skillConfiguration);
         $helloIntent->handle();
@@ -128,12 +133,13 @@ class HelloIntentTest extends TestCase
                     'title' => 'helloTitle',
                     'text'  => 'helloMessage (18)',
                     'image' => [
-                        'smallImageUrl' => 'https://image.server/small.png',
-                        'largeImageUrl' => 'https://image.server/large.png',
+                        'smallFrontImage' => 'https://image.server/small.png',
+                        'largeFrontImage' => 'https://image.server/large.png',
                     ],
                 ],
                 'shouldEndSession' => false,
             ],
+            'userAgent'         => 'phlexa-2.0 framework'
         ];
 
         $this->assertEquals($expected, $alexaResponse->toArray());

@@ -77,18 +77,24 @@ class ConfigProvider
     {
         return [
             self::NAME => [
-                'applicationId'        => 'amzn1.ask.skill.place-your-skill-id-here',
-                'skillTitle'           => 'Hello World Alexa Skill',
-                'applicationClass'     => AlexaApplication::class,
-                'textHelperClass'      => HelloTextHelper::class,
-                'sessionDefaults'      => [
+                'applicationId'             => 'amzn1.ask.skill.place-your-skill-id-here',
+                'skillTitle'                => 'Hello World Alexa Skill',
+                'applicationClass'          => AlexaApplication::class,
+                'textHelperClass'           => HelloTextHelper::class,
+                'sessionDefaults'           => [
                     'count' => 0,
                 ],
-                'smallImageUrl'        => 'https://www.phoice.tech/cards/hello-480x480.png',
-                'largeImageUrl'        => 'https://www.phoice.tech/cards/hello-800x800.png',
-                'backgroundImageUrl'   => 'https://www.phoice.tech/cards/hello-1024x600.png',
-                'backgroundImageTitle' => 'Hello World Alexa Skill',
-                'intents'              => [
+                'smallFrontImage'           => 'https://www.phoice.tech/cards/hello-480x480.png',
+                'largeFrontImage'           => 'https://www.phoice.tech/cards/hello-800x800.png',
+                'smallBackgroundImage'      => 'https://www.phoice.tech/cards/hello-480x480.png',
+                'mediumBackgroundImage'     => 'https://www.phoice.tech/cards/hello-1024x600.png',
+                'largeBackgroundImage'      => 'https://www.phoice.tech/cards/hello-1280x800.png',
+                'extraLargeBackgroundImage' => 'https://www.phoice.tech/cards/hello-1920x1080.png',
+                'normalBodyAplDocument'     => file_get_contents(
+                    PROJECT_ROOT . '/data/apl/normal_body_apl_document.json'
+                ),
+                'imageTitle'                => 'Hello World Alexa Skill',
+                'intents'                   => [
                     'aliases' => [
                         HelloIntent::NAME => HelloIntent::class,
                     ],
@@ -97,7 +103,7 @@ class ConfigProvider
                         HelloIntent::class => AbstractIntentFactory::class,
                     ],
                 ],
-                'texts'                => [
+                'texts'                     => [
                     'de-DE' => include PROJECT_ROOT . '/data/texts/hello.common.texts.de-DE.php',
                     'en-UK' => include PROJECT_ROOT . '/data/texts/hello.common.texts.en-UK.php',
                     'en-US' => include PROJECT_ROOT . '/data/texts/hello.common.texts.en-US.php',
