@@ -21,4 +21,6 @@ return [
     'cancelMessage'   => 'Cancel message',
     'helloTitle'      => 'Hello this is the title',
     'helloMessage'    => 'Hello this is the message for the hello intent.',
+    'hintText'        => 'say Hello',
+    'hintTextFull'    => 'Please try "Alexa, %1$s"',
 ];
