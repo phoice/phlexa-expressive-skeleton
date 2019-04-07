@@ -23,8 +23,8 @@
   "require": {
     "php": "^7.1",
     "ext-json": "*",
-    "phoice/phlexa": "2.0.0-beta5",
-    "phoice/phlexa-expressive": "2.0.0-beta5",
+    "phoice/phlexa": "2.0.0-beta6",
+    "phoice/phlexa-expressive": "2.0.0-beta6",
     "roave/security-advisories": "dev-master",
     "zendframework/zend-component-installer": "^2.1.1",
     "zendframework/zend-config-aggregator": "^1.0",

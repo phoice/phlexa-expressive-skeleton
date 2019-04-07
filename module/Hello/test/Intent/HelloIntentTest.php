@@ -106,6 +106,7 @@ class HelloIntentTest extends TestCase
         $alexaResponse->setSessionContainer($sessionContainer);
 
         $skillConfiguration = new SkillConfiguration();
+        $skillConfiguration->setSmallIconImage('https://image.server/icon.png');
         $skillConfiguration->setSmallFrontImage('https://image.server/small.png');
         $skillConfiguration->setLargeFrontImage('https://image.server/large.png');
         $skillConfiguration->setSmallBackgroundImage('https://image.server/small-background.png');

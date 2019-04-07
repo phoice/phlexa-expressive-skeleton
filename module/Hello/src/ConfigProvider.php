@@ -84,6 +84,7 @@ class ConfigProvider
                 'sessionDefaults'           => [
                     'count' => 0,
                 ],
+                'smallIconImage'            => 'https://www.phoice.tech/icon/small-108x108.png',
                 'smallFrontImage'           => 'https://www.phoice.tech/cards/hello-480x480.png',
                 'largeFrontImage'           => 'https://www.phoice.tech/cards/hello-800x800.png',
                 'smallBackgroundImage'      => 'https://www.phoice.tech/cards/hello-480x480.png',
