@@ -90,9 +90,11 @@ class ConfigProvider
                 'mediumBackgroundImage'     => 'https://www.phoice.tech/cards/hello-1024x600.png',
                 'largeBackgroundImage'      => 'https://www.phoice.tech/cards/hello-1280x800.png',
                 'extraLargeBackgroundImage' => 'https://www.phoice.tech/cards/hello-1920x1080.png',
-                'normalBodyAplDocument'     => file_get_contents(
-                    PROJECT_ROOT . '/data/apl/normal_body_apl_document.json'
-                ),
+                'aplDocuments'              => [
+                    'normal-body' => file_get_contents(
+                        PROJECT_ROOT . '/data/apl/normal_body_apl_document.json'
+                    ),
+                ],
                 'imageTitle'                => 'Hello World Alexa Skill',
                 'intents'                   => [
                     'aliases' => [

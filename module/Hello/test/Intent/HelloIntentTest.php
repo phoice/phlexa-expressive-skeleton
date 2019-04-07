@@ -112,7 +112,7 @@ class HelloIntentTest extends TestCase
         $skillConfiguration->setMediumBackgroundImage('https://image.server/medium-background.png');
         $skillConfiguration->setLargeBackgroundImage('https://image.server/large-background.png');
         $skillConfiguration->setExtraLargeBackgroundImage('https://image.server/extra-large-background.png');
-        $skillConfiguration->setNormalBodyAplDocument('{"type": "APL"}');
+        $skillConfiguration->setAplDocuments(['normal-body' => '{"type": "APL"}']);
 
         $helloIntent = new HelloIntent($alexaRequest, $alexaResponse, $textHelper, $skillConfiguration);
         $helloIntent->handle();
