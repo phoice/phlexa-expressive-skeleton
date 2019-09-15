@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "fd8daa0b-e521-2d00-e294-17f530abf80d",
+		"name": "Phlexa Expressive Skeleton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST Hello LaunchRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.test\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {},\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.test\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"LaunchRequest\",\n    \"requestId\": \"EdwRequestId.test\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-26T20:38:55Z\"\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello LaunchRequest SHOW",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.test\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {},\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.test\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Display\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"LaunchRequest\",\n    \"requestId\": \"EdwRequestId.test\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-26T20:38:55Z\"\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello LaunchRequest APL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.test\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {},\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.test\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Alexa.Presentation.APL\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"LaunchRequest\",\n    \"requestId\": \"EdwRequestId.test\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-26T20:38:55Z\"\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello HelloIntent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 19\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"HelloIntent\",\n      \"slots\": {}\n    }\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello HelloIntent SHOW",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 19\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Display\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"HelloIntent\",\n      \"slots\": {}\n    }\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello HelloIntent APL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 19\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Alexa.Presentation.APL\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"HelloIntent\",\n      \"slots\": {}\n    }\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello StopRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 2\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"AMAZON.StopIntent\"\n    }\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello StopRequest SHOW",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 2\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Display\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"AMAZON.StopIntent\"\n    }\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Hello StopRequest APL",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "signaturecertchainurl",
+						"value": "https://s3.amazonaws.com/echo.api/echo-api-cert-7.pem"
+					},
+					{
+						"key": "signature",
+						"value": "B/bxAdkIabkzsScfUsSfkz7pJrNLc1eoOOLk8qwG1ZudQRv7KcvyNa/91g74Zg3cRpifXEco4669MaZb4Cqs+vZ9TaTfftAMzy/Pc79AMuf1dU6GfUU7tp6cuavfqTD8cWlYN5TjEMCJbS1Y+VU929mX0edOZcZin7db6bOoZHu5gU8OSQ2r+6UMk88z5uuSjPyt9Du9vaC3Ics/Br30fEIplIgCt4y/UGRK76Rqo4L/DuNjty3o2mcU8bICK5xfZwCeH7b5UFwdjngtp8VfhKPtosZmCuWvMn+y9HoS06ll9cdI1FPLN9w7KwMZFY8UzTc+0GfAwntxzlowAwkPhQ=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 2\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Alexa.Presentation.APL\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"AMAZON.StopIntent\"\n    }\n  },\n  \"version\": \"1.0\"\n}"
+				},
+				"url": {
+					"raw": "http://phlexa.expressive.skeleton/hello",
+					"protocol": "http",
+					"host": [
+						"phlexa",
+						"expressive",
+						"skeleton"
+					],
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

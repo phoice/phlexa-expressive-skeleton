@@ -109,6 +109,7 @@ class HelloIntentTest extends TestCase
         $skillConfiguration->setSmallIconImage('https://image.server/icon.png');
         $skillConfiguration->setSmallFrontImage('https://image.server/small.png');
         $skillConfiguration->setLargeFrontImage('https://image.server/large.png');
+        $skillConfiguration->setRoundBackgroundImage('https://image.server/round-background.png');
         $skillConfiguration->setSmallBackgroundImage('https://image.server/small-background.png');
         $skillConfiguration->setMediumBackgroundImage('https://image.server/medium-background.png');
         $skillConfiguration->setLargeBackgroundImage('https://image.server/large-background.png');
@@ -134,8 +135,8 @@ class HelloIntentTest extends TestCase
                     'title' => 'helloTitle',
                     'text'  => 'helloMessage (18)',
                     'image' => [
-                        'smallFrontImage' => 'https://image.server/small.png',
-                        'largeFrontImage' => 'https://image.server/large.png',
+                        'smallImageUrl' => 'https://image.server/small.png',
+                        'largeImageUrl' => 'https://image.server/large.png',
                     ],
                 ],
                 'shouldEndSession' => false,

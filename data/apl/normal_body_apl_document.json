@@ -119,6 +119,15 @@
                     {
                         "when": "${@viewportProfile == @hubRoundSmall}",
                         "type": "Image",
+                        "source": "${payload.content.imageContent.roundBackgroundImage}",
+                        "scale": "best-fill",
+                        "width": "100vw",
+                        "height": "100vh",
+                        "position": "absolute"
+                    },
+                    {
+                        "when": "${@viewportProfile == @hubLandscapeSmall}",
+                        "type": "Image",
                         "source": "${payload.content.imageContent.smallBackgroundImage}",
                         "scale": "best-fill",
                         "width": "100vw",
@@ -144,7 +153,7 @@
                         "position": "absolute"
                     },
                     {
-                        "when": "${@viewportProfile != @hubRoundSmall && @viewportProfile != @hubLandscapeLarge && @viewportProfile != @tvLandscapeXLarge}",
+                        "when": "${@viewportProfile != @hubRoundSmall && @viewportProfile != @hubLandscapeSmall && @viewportProfile != @hubLandscapeLarge && @viewportProfile != @tvLandscapeXLarge}",
                         "type": "Image",
                         "source": "${payload.content.imageContent.mediumBackgroundImage}",
                         "scale": "best-fill",
