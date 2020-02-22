@@ -1,19 +1,19 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://github.com/phoice/phlexa-mezzio-skeleton
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
 
 declare(strict_types=1);
 
-use Zend\ConfigAggregator\ArrayProvider;
-use Zend\ConfigAggregator\ConfigAggregator;
-use Zend\ConfigAggregator\PhpFileProvider;
+use Laminas\ConfigAggregator\ArrayProvider;
+use Laminas\ConfigAggregator\ConfigAggregator;
+use Laminas\ConfigAggregator\PhpFileProvider;
 
 $cacheConfig = [
     'config_cache_path' => 'data/cache/config-cache.php',
@@ -24,16 +24,16 @@ $pattern = 'config/autoload/{{,*.}global,{,*.}'
 
 $aggregator = new ConfigAggregator(
     [
-        Zend\HttpHandlerRunner\ConfigProvider::class,
-        Zend\Expressive\ZendView\ConfigProvider::class,
-        Zend\Expressive\Router\ZendRouter\ConfigProvider::class,
-        Zend\Router\ConfigProvider::class,
-        Zend\Validator\ConfigProvider::class,
-        Zend\Expressive\Helper\ConfigProvider::class,
-        Zend\Expressive\ConfigProvider::class,
-        Zend\Expressive\Router\ConfigProvider::class,
+        Laminas\HttpHandlerRunner\ConfigProvider::class,
+        Mezzio\LaminasView\ConfigProvider::class,
+        Mezzio\Router\LaminasRouter\ConfigProvider::class,
+        Laminas\Router\ConfigProvider::class,
+        Laminas\Validator\ConfigProvider::class,
+        Mezzio\Helper\ConfigProvider::class,
+        Mezzio\ConfigProvider::class,
+        Mezzio\Router\ConfigProvider::class,
 
-        PhlexaExpressive\ConfigProvider::class,
+        PhlexaMezzio\ConfigProvider::class,
 
         Hello\ConfigProvider::class,
         Application\ConfigProvider::class,

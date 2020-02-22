@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "fd8daa0b-e521-2d00-e294-17f530abf80d",
-		"name": "Phlexa Expressive Skeleton",
+		"name": "Phlexa Mezzio Skeleton",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -28,11 +28,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.test\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {},\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.test\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"LaunchRequest\",\n    \"requestId\": \"EdwRequestId.test\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-26T20:38:55Z\"\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -65,11 +65,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.test\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {},\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.test\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Display\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"LaunchRequest\",\n    \"requestId\": \"EdwRequestId.test\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-26T20:38:55Z\"\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -102,11 +102,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.test\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {},\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.test\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Alexa.Presentation.APL\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"LaunchRequest\",\n    \"requestId\": \"EdwRequestId.test\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-26T20:38:55Z\"\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -139,11 +139,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 19\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"HelloIntent\",\n      \"slots\": {}\n    }\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -176,11 +176,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 19\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Display\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"HelloIntent\",\n      \"slots\": {}\n    }\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -213,11 +213,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 19\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Alexa.Presentation.APL\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"HelloIntent\",\n      \"slots\": {}\n    }\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -250,11 +250,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 2\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"AMAZON.StopIntent\"\n    }\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -287,11 +287,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 2\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Display\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"AMAZON.StopIntent\"\n    }\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [
@@ -324,11 +324,11 @@
 					"raw": "{\n  \"session\": {\n    \"sessionId\": \"SessionId.d605d67f-d575-465a-ab93-9ef23b48bcfc\",\n    \"application\": {\n      \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n    },\n    \"attributes\": {\n      \"count\": 2\n    },\n    \"user\": {\n      \"userId\": \"amzn1.ask.account.AF6S5KHAPVECZ2WW7GEUMM3LHNPSC6XWQKUM3YB4KNAXKARTXHOQGNM5ZU3L7LPCBWAFUFSFJHFUMGQHQHIQJB6SFIE73X22QF7WOAUGXLVHB3OVEJ5E4B76PQHJJUTHU54KM2SUWG7JG5YEXNQJ5XKG2XKGQW7OZ25G2V6TQTQKR2I2GNLN6UYVZKLDC4AF5WYCYGFQOZTMMHI\"\n    },\n    \"new\": true\n  },\n  \"context\": {\n    \"AudioPlayer\": {\n      \"playerActivity\": \"IDLE\"\n    },\n    \"System\": {\n      \"application\": {\n        \"applicationId\": \"amzn1.ask.skill.place-your-skill-id-here\"\n      },\n      \"user\": {\n        \"userId\": \"amzn1.ask.account.test\"\n      },\n      \"device\": {\n        \"deviceId\": \"amzn1.ask.device.test\",\n        \"supportedInterfaces\": {\n          \"AudioPlayer\": {},\n          \"Alexa.Presentation.APL\" : {}\n        }\n      },\n      \"apiEndpoint\": \"https://api.eu.amazonalexa.com\"\n    }\n  },\n  \"request\": {\n    \"type\": \"IntentRequest\",\n    \"requestId\": \"EdwRequestId.bddf998c-34b6-452a-808c-7c007e008e87\",\n    \"locale\": \"de-DE\",\n    \"timestamp\": \"2017-01-27T20:29:59Z\",\n    \"intent\": {\n      \"name\": \"AMAZON.StopIntent\"\n    }\n  },\n  \"version\": \"1.0\"\n}"
 				},
 				"url": {
-					"raw": "http://phlexa.expressive.skeleton/hello",
+					"raw": "http://phlexa.mezzio.skeleton/hello",
 					"protocol": "http",
 					"host": [
 						"phlexa",
-						"expressive",
+						"mezzio",
 						"skeleton"
 					],
 					"path": [

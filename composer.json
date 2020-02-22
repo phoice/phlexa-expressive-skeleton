@@ -1,67 +1,68 @@
 {
-  "name": "phoice/phlexa-expressive-skeleton",
-  "description": "Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\\Expressive. ",
-  "license": "MIT",
-  "type": "project",
-  "homepage": "https://www.phoice.tech/",
-  "config": {
-    "sort-packages": true
-  },
-  "extra": {
-    "zf": {
-      "component-whitelist": [
-        "zendframework/zend-expressive",
-        "zendframework/zend-expressive-helpers",
-        "zendframework/zend-expressive-router",
-        "zendframework/zend-httphandlerrunner",
-        "zendframework/zend-expressive-zendrouter",
-        "zendframework/zend-expressive-zendviewrenderer"
-      ]
+    "name": "phoice/phlexa-mezzio-skeleton",
+    "description": "Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio. ",
+    "license": "MIT",
+    "type": "project",
+    "homepage": "https://www.phoice.tech/",
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "zf": {
+            "component-whitelist": [
+                "mezzio/mezzio",
+                "mezzio/mezzio-helpers",
+                "mezzio/mezzio-router",
+                "laminas/laminas-httphandlerrunner",
+                "mezzio/mezzio-laminasrouter",
+                "mezzio/mezzio-laminasviewrenderer"
+            ]
+        }
+    },
+    "minimum-stability": "beta",
+    "require": {
+        "php": "^7.1",
+        "ext-json": "*",
+        "phoice/phlexa": "^3.0.0",
+        "phoice/phlexa-mezzio": "^3.0.0",
+        "roave/security-advisories": "dev-master",
+        "laminas/laminas-component-installer": "^2.1.1",
+        "laminas/laminas-config-aggregator": "^1.0",
+        "laminas/laminas-diactoros": "^1.7.1",
+        "mezzio/mezzio": "^3.0.1",
+        "mezzio/mezzio-helpers": "^5.0",
+        "mezzio/mezzio-laminasrouter": "^3.0",
+        "mezzio/mezzio-laminasviewrenderer": "^2.0",
+        "laminas/laminas-servicemanager": "^3.3",
+        "laminas/laminas-dependency-plugin": "^1.0"
+    },
+    "require-dev": {
+        "filp/whoops": "^2.1.12",
+        "phpunit/phpunit": "^7.0",
+        "squizlabs/php_codesniffer": "^2.9.1",
+        "mezzio/mezzio-tooling": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "module/Application/src/",
+            "Hello\\": "module/Hello/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "module/Application/test/",
+            "HelloTest\\": "module/Hello/test/"
+        }
+    },
+    "scripts": {
+        "check": [
+            "@cs-check",
+            "@test"
+        ],
+        "cs-check": "phpcs module/",
+        "mezzio": "mezzio --ansi",
+        "test": "phpunit --colors=always",
+        "test-coverage": "phpunit --colors=always --coverage-html html/coverage/",
+        "upload-coverage": "coveralls -v"
     }
-  },
-  "minimum-stability" : "beta",
-  "require": {
-    "php": "^7.1",
-    "ext-json": "*",
-    "phoice/phlexa": "^2.0.0",
-    "phoice/phlexa-expressive": "^2.0.0",
-    "roave/security-advisories": "dev-master",
-    "zendframework/zend-component-installer": "^2.1.1",
-    "zendframework/zend-config-aggregator": "^1.0",
-    "zendframework/zend-diactoros": "^1.7.1",
-    "zendframework/zend-expressive": "^3.0.1",
-    "zendframework/zend-expressive-helpers": "^5.0",
-    "zendframework/zend-expressive-zendrouter": "^3.0",
-    "zendframework/zend-expressive-zendviewrenderer": "^2.0",
-    "zendframework/zend-servicemanager": "^3.3"
-  },
-  "require-dev": {
-    "filp/whoops": "^2.1.12",
-    "phpunit/phpunit": "^7.0",
-    "squizlabs/php_codesniffer": "^2.9.1",
-    "zendframework/zend-expressive-tooling": "^1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "Application\\": "module/Application/src/",
-      "Hello\\": "module/Hello/src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "ApplicationTest\\": "module/Application/test/",
-      "HelloTest\\": "module/Hello/test/"
-    }
-  },
-  "scripts": {
-    "check": [
-      "@cs-check",
-      "@test"
-    ],
-    "cs-check": "phpcs module/",
-    "expressive": "expressive --ansi",
-    "test": "phpunit --colors=always",
-    "test-coverage": "phpunit --colors=always --coverage-html html/coverage/",
-    "upload-coverage": "coveralls -v"
-  }
 }

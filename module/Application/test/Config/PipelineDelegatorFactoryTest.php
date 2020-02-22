@@ -1,10 +1,10 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://github.com/phoice/phlexa-mezzio-skeleton
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
@@ -15,24 +15,24 @@ namespace ApplicationTest\Config;
 
 use Application\Config\PipelineDelegatorFactory;
 use Interop\Container\ContainerInterface;
-use PhlexaExpressive\Middleware\CheckApplicationMiddleware;
-use PhlexaExpressive\Middleware\ConfigureSkillMiddleware;
-use PhlexaExpressive\Middleware\LogAlexaRequestMiddleware;
-use PhlexaExpressive\Middleware\SetLocaleMiddleware;
-use PhlexaExpressive\Middleware\ValidateCertificateMiddleware;
+use PhlexaMezzio\Middleware\CheckApplicationMiddleware;
+use PhlexaMezzio\Middleware\ConfigureSkillMiddleware;
+use PhlexaMezzio\Middleware\LogAlexaRequestMiddleware;
+use PhlexaMezzio\Middleware\SetLocaleMiddleware;
+use PhlexaMezzio\Middleware\ValidateCertificateMiddleware;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\MethodProphecy;
 use Prophecy\Prophecy\ObjectProphecy;
-use Zend\Expressive\Application;
-use Zend\Expressive\Handler\NotFoundHandler;
-use Zend\Expressive\Helper\ServerUrlMiddleware;
-use Zend\Expressive\Helper\UrlHelperMiddleware;
-use Zend\Expressive\Router\Middleware\DispatchMiddleware;
-use Zend\Expressive\Router\Middleware\ImplicitHeadMiddleware;
-use Zend\Expressive\Router\Middleware\ImplicitOptionsMiddleware;
-use Zend\Expressive\Router\Middleware\MethodNotAllowedMiddleware;
-use Zend\Expressive\Router\Middleware\RouteMiddleware;
-use Zend\Stratigility\Middleware\ErrorHandler;
+use Mezzio\Application;
+use Mezzio\Handler\NotFoundHandler;
+use Mezzio\Helper\ServerUrlMiddleware;
+use Mezzio\Helper\UrlHelperMiddleware;
+use Mezzio\Router\Middleware\DispatchMiddleware;
+use Mezzio\Router\Middleware\ImplicitHeadMiddleware;
+use Mezzio\Router\Middleware\ImplicitOptionsMiddleware;
+use Mezzio\Router\Middleware\MethodNotAllowedMiddleware;
+use Mezzio\Router\Middleware\RouteMiddleware;
+use Laminas\Stratigility\Middleware\ErrorHandler;
 
 /**
  * Class PipelineDelegatorFactoryTest

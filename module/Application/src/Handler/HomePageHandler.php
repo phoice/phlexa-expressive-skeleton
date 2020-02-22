@@ -1,10 +1,10 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://github.com/phoice/phlexa-mezzio-skeleton
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
@@ -17,7 +17,7 @@ use InvalidArgumentException;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
-use Zend\Diactoros\Response\JsonResponse;
+use Laminas\Diactoros\Response\JsonResponse;
 
 /**
  * Class HomePageHandler
@@ -36,7 +36,7 @@ class HomePageHandler implements RequestHandlerInterface
     {
         return new JsonResponse(
             [
-                'hello' => 'Welcome to the phlexa skeleton application',
+                'hello' => 'Welcome to the phlexa mezzio skeleton application',
             ]
         );
     }

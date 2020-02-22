@@ -1,10 +1,10 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://github.com/phoice/phlexa-mezzio-skeleton
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
@@ -141,7 +141,7 @@ class HelloIntentTest extends TestCase
                 ],
                 'shouldEndSession' => false,
             ],
-            'userAgent'         => 'phlexa-2.0 framework'
+            'userAgent'         => 'phlexa-3.0 framework'
         ];
 
         $this->assertEquals($expected, $alexaResponse->toArray());

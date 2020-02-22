@@ -1,30 +1,30 @@
-# phlexa-expressive-skeleton
+# phlexa-mezzio-skeleton
 
 Skeleton application to build voice applications for Amazon Alexa with 
-phlexa, PHP and Zend\Expressive. 
+phlexa, PHP and Mezzio. 
 
 ## Dependencies
 
 * PHP 7
 * [phlexa](https://github.com/phoice/phlexa)
-* [phlexa for Zend\Expressiv](https://github.com/phoice/phlexa-expressive)
-* [Zend\Expressive micro-framework](https://docs.zendframework.com/zend-expressive/)
+* [phlexa for Laminas Mezzio](https://github.com/phoice/phlexa-mezzio)
+* [Mezzio micro-framework](https://docs.mezzio.dev/)
 
-This skeleton application is built with `Zend\Expressive`. For further 
-details about the `Zend\Expressive` micro-framework please refer to the 
-official [docs](https://docs.zendframework.com/zend-expressive/).
+This skeleton application is built with `Mezzio`. For further 
+details about the `Mezzio` micro-framework please refer to the 
+official [docs](https://docs.mezzio.dev/).
 
 ## Installation
 
 Create a new project based on the skeleton application simply with Composer:
 
 ```
-composer create-project phoice/phlexa-expressive-skeleton name-of-your-project
+composer create-project phoice/phlexa-mezzio-skeleton name-of-your-project
 ```
 
 ## What you get
 
-* A `Zend\Expressive` application setup for you to handle requests from 
+* A `Mezzio` application setup for you to handle requests from 
   Amazon Alexa and to send your responses back to Alexa. The application is 
   based on the [phlexa Library](https://github.com/phoice/phlexa)
 * An Alexa application based on phlexa with a simple `HelloIntent` to
@@ -155,7 +155,7 @@ To access the server type into the browser "http:://localhost"
 
 * install docker (see: https://docs.docker.com/install/)
 * start "docker-compose up -d"
-* install vendor packages "docker exec phlexa-expressive-skeleton_php-apache_1 composer install"
+* install vendor packages "docker exec phlexa-mezzio-skeleton_php-apache_1 composer install"
 * open in browser "http://localhost"
 
 Hint: There also a maria db server included in this docker files. You can find the user and the password in file "./mariadb/Dockerfile" The maria db is not necessary to run the skeleton app.

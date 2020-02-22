@@ -1,10 +1,10 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://github.com/phoice/phlexa-mezzio-skeleton
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
@@ -19,7 +19,7 @@ use Interop\Container\ContainerInterface;
 use PHPUnit\Framework\TestCase;
 use Prophecy\Prophecy\MethodProphecy;
 use Prophecy\Prophecy\ObjectProphecy;
-use Zend\Expressive\Application;
+use Mezzio\Application;
 
 /**
  * Class RouterDelegatorFactoryTest

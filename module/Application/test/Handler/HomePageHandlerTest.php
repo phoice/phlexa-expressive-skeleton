@@ -1,10 +1,10 @@
 <?php
 /**
- * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Zend\Expressive
+ * Skeleton application to build voice applications for Amazon Alexa with phlexa, PHP and Mezzio
  *
  * @author     Ralf Eggert <ralf@travello.audio>
  * @license    http://opensource.org/licenses/MIT The MIT License (MIT)
- * @link       https://github.com/phoice/phlexa-expressive-skeleton
+ * @link       https://github.com/phoice/phlexa-mezzio-skeleton
  * @link       https://www.phoice.tech/
  * @link       https://www.travello.audio/
  */
@@ -16,7 +16,7 @@ namespace ApplicationTest\Handler;
 use Application\Handler\HomePageHandler;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\ServerRequestInterface;
-use Zend\Diactoros\Response;
+use Laminas\Diactoros\Response;
 
 /**
  * Class HomePageHandlerTest
@@ -44,7 +44,7 @@ class HomePageHandlerTest extends TestCase
         $json = json_decode((string)$response->getBody());
 
         $this->assertEquals(
-            'Welcome to the phlexa skeleton application',
+            'Welcome to the phlexa mezzio skeleton application',
             $json->hello
         );
     }
